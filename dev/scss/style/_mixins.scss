@@ -1,0 +1,15 @@
+//@import "mixins/===";
+
+@mixin alignTop() {
+  .toolbar-fixed.toolbar-horizontal & {
+    top:79px;
+  }
+
+  .toolbar-fixed.toolbar-vertical & {
+    top: 39px;
+  }
+
+  body:not(.toolbar-fixed) & {
+    top: 0;
+  }
+}

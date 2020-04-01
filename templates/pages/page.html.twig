@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ */
+#}
+
+{% set content_attribute = create_attribute() %}
+
+{%
+  set content_lasses = [
+    page.sidebar_first ? 'col-md-9' : 'col-12',
+  ]
+%}
+
+<div id='page-wrap'>
+  <header role="banner">
+    {{ page.branding }}
+    {{ page.header }}
+  </header>
+
+  {{ page.primary_menu }}
+  
+  <main role="main">
+    {{ page.highlighted }}
+
+    <div class="row">
+      <div{{ content_attribute.addClass(content_lasses) }}>
+        {{ page.content }}
+      </div>
+
+      {% if page.sidebar_first %}
+        <aside class="col-md-3" role="complementary">
+          {{ page.sidebar_first }}
+        </aside>
+      {% endif %}
+    </div>
+
+    {{ page.after_content }}
+  </main>
+
+  {% if page.footer %}
+    <footer  id="main-footer" role="contentinfo" class="bg-dark">
+      {{ page.footer }}
+      {{ page.pre_footer }}
+    </footer>
+  {% endif %}
+
+  {{ page.help }}
+</div>

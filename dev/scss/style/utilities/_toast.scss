@@ -1,0 +1,18 @@
+.region-help {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+
+  .toast {
+    .toast-dot {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 4px
+    }
+  }
+}

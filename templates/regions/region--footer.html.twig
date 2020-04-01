@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Theme override to display a region.
+*/
+#}
+
+{% extends "region.html.twig" %}
+
+{% block region %}
+  <div class="container">
+    {{ content }}
+  </div>
+{% endblock %}

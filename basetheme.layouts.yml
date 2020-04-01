@@ -1,0 +1,19 @@
+custom_layout:
+  label: 'Main Front page'
+  category: 'Custom Layouts'
+  template: templates/layouts/main-front-page
+  default_region: content
+  icon_map:
+    - [content_top, content_top, header_right]
+    - [content, content_right, header_right]
+    - [content, content_right, header_right]
+
+  regions:
+    header_right:
+      label: 'Right sidebar'
+    content_top:
+      label: 'Content top'
+    content:
+      label: Content
+    content_right:
+      label: 'Content right'

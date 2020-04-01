@@ -1,0 +1,44 @@
+{
+  "name": "basetheme",
+  "version": "1.0.0",
+  "description": "Theme Standardbred bootstrap 4 + gulp.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:optasy/basetheme.git"
+  },
+  "author": "Optasy.com",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%",
+    "ie >= 8",
+    "edge >= 15",
+    "ie_mob >= 10",
+    "ff >= 45",
+    "chrome >= 45",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4",
+    "bb >= 10"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "autoprefixer": "^9.7.4",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "cssnano": "^4.1.10",
+    "gulp-postcss": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-strip-comments": "^2.5.2"
+  },
+
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "popper.js": "^1.16.0"
+  }
+}

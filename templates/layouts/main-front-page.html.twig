@@ -1,0 +1,49 @@
+{% set classes = [
+ 'layout',
+ 'layout--custom-layout',
+ 'row'
+] %}
+
+{%
+  set regionClass = [
+    content.content_right ? 'col-md-6' : 'col-12',
+  ]
+%}
+
+{% if content %}
+  <div class="container">
+    <div{{ attributes.addClass(classes) }}>
+      {% if content.header_right %}
+        <div class="col-md-9">
+          <div class="row">
+      {% endif %}
+
+      {% if content.content_top %}
+        <div {{ region_attributes.content_top.addClass('col-12', 'layout__region', 'layout__region--content_top') }}>
+          {{ content.content_top }}
+        </div>
+      {% endif %}
+
+      {% if content.content %}
+        <div {{ region_attributes.content.addClass(regionClass, 'layout__region', 'layout__region--content') }}>
+          {{ content.content }}
+        </div>
+      {% endif %}
+
+      {% if content.content_right %}
+        <div {{ region_attributes.content_right.addClass('col-md-6', 'layout__region', 'layout__region--content_right') }}>
+          {{ content.content_right }}
+        </div>
+      {% endif %}
+
+      {% if content.header_right %}
+          </div>
+        </div>
+
+        <div {{ region_attributes.header_right.addClass('col-md-3', 'layout__region', 'layout__region--header_right') }}>
+          {{ content.header_right }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
